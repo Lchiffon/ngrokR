@@ -1,4 +1,8 @@
-
+#' Install ngrok
+#'
+#' \code{downloadNgrok()} provide the function to download and install ngrok.
+#'
+#' @export
 downloadNgrok = function(){
   message("Download URL from https://ngrok.com/download")
   if(is_linux()){
@@ -52,4 +56,14 @@ downloadNgrok = function(){
     paste(dirs, collapse = ', ')
   )
   message('ngrok has been installed to ', normalizePath(destdir))
+}
+
+
+checkNgrok = function(){
+  filePath = ngrokPath()
+  status = file.exists(filePath)
+  if(!status){
+    message("ngrok not Found! run ngrokR::installNgrok() to install ngrok tools...")
+  }
+  return(status)
 }

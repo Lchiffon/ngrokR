@@ -1,11 +1,14 @@
 Package: ngrokR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: ngrok tools in R, provide introspected tunnels to localhost.
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: person('Dawei','Lang',role='cre',email='happy@langdawei.com')
+Description: ngrok tools in R, provide introspected tunnels to localhost.
+    Check <www.ngrok.com> to get the auth. 
+    Please check ngrok Terms Of Service <https://ngrok.com/tos> before using it.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Imports:
+    processx
+RoxygenNote: 6.0.1

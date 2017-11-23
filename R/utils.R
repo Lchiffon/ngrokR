@@ -7,6 +7,15 @@ is_windows = function() .Platform$OS.type == 'windows'
 is_osx = function() Sys.info()[['sysname']] == 'Darwin'
 is_linux = function() Sys.info()[['sysname']] == 'Linux'
 
+ngrokPath = function(){
+  if (is_windows()) {
+    exec = 'ngrok.exe'
+  } else {
+    exec = 'ngrok'
+  }
+  filePath = paste0(pkg_file(),"/", exec)
+  return(filePath)
+}
 
 
 download2 = function(url, ...) {
